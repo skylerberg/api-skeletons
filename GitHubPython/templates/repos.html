@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Showing results for {{ username }}</h1>
+      <ul>
+        {% for repo in repos %}
+        <li><a href={{ repo["html_url"] }}>{{ repo["name"] }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
